@@ -3,8 +3,7 @@ import { ChannelSelect } from "./ChannelSelect";
 import { ChannelsListDocument, MenuGetBySlugDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 
-export async function Footer() {
-	{ channel }: { channel: string }
+export async function Footer({ channel }: { channel: string }) {
 	const footerLinks = await executeGraphQL(MenuGetBySlugDocument, {
 		variables: { slug: "footer", channel },
 		revalidate: 60 * 60 * 24,
