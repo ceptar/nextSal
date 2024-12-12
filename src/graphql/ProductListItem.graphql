@@ -1,0 +1,41 @@
+fragment ProductListItem on Product {
+	id
+	name
+	slug
+	pricing {
+		priceRange {
+			start {
+				gross {
+					amount
+					currency
+				}
+			}
+			stop {
+				gross {
+					amount
+					currency
+				}
+			}
+		}
+	}
+	category {
+		id
+		name
+	}
+	thumbnail(size: 2048, format: ORIGINAL) {
+		url
+		alt
+	}
+	attributes {
+		attribute {
+			id
+			name
+			slug
+		}
+		values {
+			slug
+			name
+			id
+		}
+	}
+}
