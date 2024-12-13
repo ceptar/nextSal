@@ -1,4 +1,4 @@
-'use server'
+"use server"
 import { Suspense } from "react";
 import { SearchBar } from "../SearchBar";
 import { MobileMenu } from "./MobileMenu";
