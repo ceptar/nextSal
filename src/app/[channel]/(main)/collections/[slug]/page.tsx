@@ -124,7 +124,7 @@ export default function Page() {
 				{data?.name}
 			</h1>
 
-			<div className="flex items-center z-[21] h-16 fixed top-0 left-[calc(100vw-8rem)] md:left-[calc(100vw-10rem)] flex-col justify-center ">
+			<div className="flex items-center z-[21] h-16 fixed top-0 left-[calc(100%-7rem)] md:left-[calc(100%-9rem)] flex-col justify-center ">
 				<button
 					onClick={() => setIsFilterSheetOpen(true)}
 					className={clsx(
