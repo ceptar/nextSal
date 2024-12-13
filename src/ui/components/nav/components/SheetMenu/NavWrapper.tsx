@@ -3,7 +3,7 @@ import { SearchBar } from "../SearchBar";
 import { MobileMenu } from "./MobileMenu";
 import { executeGraphQL } from "@/lib/graphql";
 import { MenuGetBySlugDocument } from "@/gql/graphql";
-import { NavLinks } from "./NavLinks";
+// import { NavLinks } from "./NavLinks";
 
 interface NavItem {
 	id: string;
