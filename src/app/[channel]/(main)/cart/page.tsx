@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 
 	return (
 		<section className="mx-auto flex max-w-7xl flex-col p-4">
-			<h1 className="mt-8 font-titlefont  text-3xl font-bold uppercase text-primary">Your Shopping Cart</h1>
+			<h1 className="text-center mt-8 font-titlefont  text-3xl font-bold uppercase text-primary">Your Shopping Cart</h1>
 			<form className="mt-12">
 				<ul
 					data-testid="CartProductList"

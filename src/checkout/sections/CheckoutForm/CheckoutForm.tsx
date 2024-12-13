@@ -24,7 +24,7 @@ export const CheckoutForm = () => {
 
 	return (
 		<div className="flex flex-col items-end">
-			<div className="flex w-full flex-col rounded">
+			<div className="flex w-full flex-col rounded-none">
 				<Suspense fallback={<ContactSkeleton />}>
 					<Contact setShowOnlyContact={setShowOnlyContact} />
 				</Suspense>
