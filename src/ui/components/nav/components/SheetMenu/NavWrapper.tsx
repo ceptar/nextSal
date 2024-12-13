@@ -3,6 +3,7 @@ import { SearchBar } from "../SearchBar";
 import { MobileMenu } from "./MobileMenu";
 import { executeGraphQL } from "@/lib/graphql";
 import { MenuGetBySlugDocument } from "@/gql/graphql";
+import { NavLinks } from "./NavLinks";
 
 interface NavItem {
 	id: string;
@@ -26,7 +27,7 @@ export const NavWrapper = async ({ channel }: { channel: string }) => {
 	});
 
 	const navItems: NavItem[] = [
-		{ id: "all", href: "/products", name: "All" },
+		{ id: "all", href: "products", name: "All" },
 		...(navLinksData.menu?.items?.map((item) => ({
 			id: item.id,
 			name: item.name,
@@ -50,8 +51,8 @@ console.log('navItems', navItems)
 		<div className="flex items-center z-[100]">
 			{/* <Suspense fallback={<div className="w-8" />}>
 				<CartNavItem channel={channel} />
-			</Suspense>
-			<NavLinks navItems={navItems} /> */}
+			</Suspense> 
+			<NavLinks navItems={navItems} />*/}
 			<MobileMenu navItems={navItems}>
 				<Suspense>
 					<SearchBar channel={channel} />
