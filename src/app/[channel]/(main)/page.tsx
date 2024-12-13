@@ -26,13 +26,13 @@ export default async function Page({ params }: { params: { channel: string } }) 
 
 	return (
 		<>
-			<section className="absolute top-0 h-full w-full">
+			<section className="absolute top-0 h-[100dvh] w-full">
 				<HeroTwo />
 
 
 			</section>
 			<section className="">
-			<div className="flex relative h-[calc(100vh-64px)] w-full"></div>
+			<div className="flex relative h-[calc(100dvh-64px)] w-full"></div>
 			</section>
 			<section className="mb-[5rem] p-4">
 				<h1 className="pb-16 pt-12 text-center font-titlefont text-3xl font-bold uppercase text-primary">

@@ -95,7 +95,7 @@ export async function Footer({ channel }: { channel: string }) {
 					</div>
 				)}
 				</div>
-				<div className="flex items-end w-full flex-grow flex-col items-start justify-evenly p-4 md:flex-row">
+				<div className="flex items-start md:items-end w-full flex-grow flex-col justify-evenly p-4 md:flex-row">
 					<p className="text-xs text-neutral-500">Copyright &copy; {currentYear} DiscoBabes</p>
 				</div>
 			</div>
