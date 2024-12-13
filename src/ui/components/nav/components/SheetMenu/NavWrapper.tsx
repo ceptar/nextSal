@@ -45,7 +45,7 @@ export const NavWrapper = async ({ channel }: { channel: string }) => {
 				})) || [],
 		})) || []),
 	];
-
+console.log('navItems', navItems)
 	return (
 		<div className="flex items-center z-[100]">
 			{/* <Suspense fallback={<div className="w-8" />}>
