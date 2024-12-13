@@ -17,10 +17,10 @@ fragment OrderDetails on Order {
 				name
 				description
 				slug
-				thumbnail {
-					url
-					alt
-				}
+	thumbnail(size: 512, format: ORIGINAL) {
+		url
+		alt
+	}
 				category {
 					id
 					name

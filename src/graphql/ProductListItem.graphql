@@ -22,7 +22,7 @@ fragment ProductListItem on Product {
 		id
 		name
 	}
-	thumbnail(size: 2048, format: ORIGINAL) {
+	thumbnail(size: 1024, format: ORIGINAL) {
 		url
 		alt
 	}

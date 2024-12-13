@@ -11,7 +11,7 @@ const config = {
 	experimental: {
 		typedRoutes: false,
 		serverActions: {
-			allowedOrigins: ["localhost:3001"],
+			allowedOrigins: ["*"],
 		}
 
 	},

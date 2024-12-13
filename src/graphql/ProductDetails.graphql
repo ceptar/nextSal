@@ -12,7 +12,7 @@ query ProductDetails($slug: String!, $channel: String!) {
 			url
 			alt
 		}
-		thumbnail(size: 1024, format: WEBP) {
+		thumbnail(size: 1024, format: ORIGINAL) {
 			url
 			alt
 		}

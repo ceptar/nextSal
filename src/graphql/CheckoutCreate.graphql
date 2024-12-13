@@ -17,10 +17,10 @@ mutation CheckoutCreate($channel: String!) {
 						id
 						name
 						slug
-						thumbnail {
-							url
-							alt
-						}
+	thumbnail(size: 512, format: ORIGINAL) {
+		url
+		alt
+	}
 						category {
 							name
 						}
