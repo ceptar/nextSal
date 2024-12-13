@@ -1,3 +1,4 @@
+'use server'
 import { Suspense } from "react";
 import { SearchBar } from "../SearchBar";
 import { MobileMenu } from "./MobileMenu";
@@ -22,7 +23,7 @@ interface NavItem {
 
 export const NavWrapper = async ({ channel }: { channel: string }) => {
 	const navLinksData = await executeGraphQL(MenuGetBySlugDocument, {
-		variables: { slug: "navbar", channel },
+		variables: { slug: "navbar", channel: channel },
 		revalidate: 60 * 60 * 24,
 	});
 
