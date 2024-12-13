@@ -1,7 +1,7 @@
 export const HeroTwo = () => {
     return (
         <section className="relative h-full w-full">
-            <div className="absolute top-0 flex h-full w-full flex-col bg-primary md:flex-row">
+            <div className="absolute top-0 flex h-[50dvh] md:h-[100dvh] w-full flex-col bg-primary md:flex-row">
                 <div className="flex h-full w-full flex-col md:h-full md:w-[50%] md:flex-row">
                     <div className="relative h-full w-full">
                         <img

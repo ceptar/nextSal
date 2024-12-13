@@ -20,10 +20,10 @@ export async function Footer({ channel }: { channel: string }) {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="flex w-full flex-col bg-primary/5 justify-evenly py-0 md:flex-row">
+		<footer className="flex pt-16 pb-8 w-full items-end flex-col bg-primary/5 justify-evenly py-0 md:flex-row">
 			<div className="flex min-h-full w-full flex-col justify-evenly py-0 md:flex-row">
 				<div className="flex w-full flex-grow flex-col justify-evenly p-4 md:flex-row">
-					<div className="-mx-2 flex min-h-full flex-grow flex-col justify-between py-10 sm:flex-row">
+					<div className="-mx-2 flex min-h-full flex-grow flex-col justify-between sm:flex-row">
 						<svg className="h-[75px] w-[108px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 150">
 							<path
 								d="m 30.933,86.537 c 3.951,0 7.182,3.236 7.182,7.159 0,3.922 -3.231,7.044 -7.182,7.044 z m -1.314,-6.36 h -5.445 v 67.643 c 2.214,0 4.446,-0.36 6.759,-0.91 11.826,-3.05 20.628,-13.91 20.628,-26.82 0,-7.96 -3.438,-15.12 -8.802,-20.148 1.017,-1.828 1.62,-4.036 1.62,-6.245 0,-7.464 -5.661,-13.52 -14.76,-13.52 z m 8.388,24.603 c 4.446,4.53 6.777,9.86 6.777,15.5 0,9.18 -5.859,16.95 -13.851,19.77 V 107.1 c 2.43,-0.38 4.554,-0.91 7.074,-2.32 z m 47.97,42.61 v -13.4 h 3.33 v -6.36 h -3.33 V 95.906 c 0,-5.941 -0.612,-8.378 -2.52,-11.197 -2.448,-3.427 -6.264,-5.332 -11.034,-5.332 -5.238,0 -9.666,2.628 -11.907,7.046 -1.116,2.322 -1.521,4.531 -1.521,9.978 v 31.229 h -3.339 v 6.36 h 3.339 v 13.4 h 6.777 v -13.4 h 13.446 v 13.4 z M 79.218,127.63 H 65.772 V 93.201 c 0,-4.57 2.817,-7.578 7.065,-7.578 3.933,0 6.381,2.932 6.381,7.464 z M 101.91,86.537 c 3.93,0 7.18,3.237 7.18,7.16 0,3.922 -3.25,7.043 -7.18,7.043 z m -1.31,-6.36 h -5.461 v 67.643 c 2.223,0 4.437,-0.36 6.771,-0.91 11.83,-3.05 20.62,-13.91 20.62,-26.82 0,-7.96 -3.43,-15.12 -8.79,-20.148 1,-1.828 1.6,-4.036 1.6,-6.245 0,-7.464 -5.64,-13.52 -14.74,-13.52 z m 8.36,24.603 c 4.48,4.53 6.81,9.86 6.81,15.5 0,9.18 -5.88,16.95 -13.86,19.77 V 107.1 c 2.44,-0.38 4.54,-0.91 7.05,-2.32 z m 41.22,42.61 v -6.35 h -13.43 v -41.02 h 16.88 v -6.323 h -16.88 v -7.16 h 13.43 v -6.36 h -20.2 v 13.52 h -3.37 v 6.323 h 3.37 v 47.37 z m 14.53,-33.55 c 2.58,2.51 7.06,5.94 7.06,12.61 0,8.04 -6.57,14.59 -14.75,14.59 v 6.78 c 11.92,0 21.5,-9.6 21.5,-21.37 0,-3.65 -0.9,-7.08 -1.9,-8.87 -2.02,-4.04 -4.48,-6.37 -7,-8.46 -4.35,-3.66 -5.84,-6.55 -5.84,-10.396 0,-6.741 5.47,-12.187 12.22,-12.187 v -6.741 c -10.5,0 -18.98,8.454 -18.98,18.928 0,4.726 1.98,9.676 7.69,15.116 z"
@@ -95,11 +95,11 @@ export async function Footer({ channel }: { channel: string }) {
 					</div>
 				)}
 				</div>
-			</div>
-			<div className="flex flex-col justify-between p-1 pb-10 sm:flex-row">
-					<p className="text-sm text-neutral-500">Copyright &copy; {currentYear} DiscoBabes</p>
-					<p className="flex gap-1 text-sm text-neutral-500">SOCIAL</p>
+				<div className="flex items-end w-full flex-grow flex-col items-start justify-evenly p-4 md:flex-row">
+					<p className="text-xs text-neutral-500">Copyright &copy; {currentYear} DiscoBabes</p>
 				</div>
+			</div>
+
 		</footer>
 
 		/* 		<footer className="border-neutral-300 bg-rose-50">
