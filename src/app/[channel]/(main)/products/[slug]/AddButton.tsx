@@ -1,5 +1,5 @@
 "use client";
-
+import { AnimatedButton } from "@/ui/animated-button";
 import { useFormStatus } from "react-dom";
 
 export function AddButton({ disabled, onClick }: { disabled?: boolean; onClick: () => void }) {
@@ -7,19 +7,15 @@ export function AddButton({ disabled, onClick }: { disabled?: boolean; onClick: 
 	const isButtonDisabled = disabled || pending;
 
 	return (
-		<button
-			type="button"
-			aria-disabled={isButtonDisabled}
-			aria-busy={pending}
-			onClick={(e) => {
-				if (!isButtonDisabled) {
-					onClick();
-				} else {
-					e.preventDefault();
-				}
-			}}
-			className="h-12 items-center bg-neutral-900 px-6 py-3 text-sm font-normal uppercase tracking-[0.1em] leading-4 text-white shadow hover:bg-neutral-800/70 disabled:cursor-not-allowed disabled:opacity-70 hover:disabled:bg-neutral-700 aria-disabled:cursor-not-allowed aria-disabled:opacity-70 hover:aria-disabled:bg-neutral-700"
-		>
+		<AnimatedButton 		 
+		onClick={(e) => {
+			if (!isButtonDisabled) {
+				onClick();
+			} else {
+				e.preventDefault();
+			}
+		}} 
+		className="flex flex-row h-full font-large justify-start border-[2px] border-primary px-4 py-2 text-lg shadow-none">
 			{pending ? (
 				<div className="inline-flex items-center">
 					<svg
@@ -47,6 +43,6 @@ export function AddButton({ disabled, onClick }: { disabled?: boolean; onClick: 
 			) : (
 				<span>Add to cart</span>
 			)}
-		</button>
+		</AnimatedButton>
 	);
 }

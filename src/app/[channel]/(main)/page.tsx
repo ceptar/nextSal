@@ -1,12 +1,13 @@
 import { ProductListByCollectionDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 import { HeroTwo } from "@/ui/components/HeroTwo";
+import { PageTitle } from "@/ui/components/layout/PagesTitle";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
-	title: "ACME Storefront, powered by Saleor & Next.js",
+	title: "DiscoBabes, no boring Jewelry",
 	description:
-		"Storefront Next.js Example for building performant e-commerce experiences with Saleor - the composable, headless commerce platform for global brands.",
+		"handmade art to complement expressive personalities and their ability to paint the world around them! rainbow, rosegold, glitter, pitchblack!",
 };
 
 export default async function Page({ params }: { params: { channel: string } }) {
@@ -23,21 +24,20 @@ export default async function Page({ params }: { params: { channel: string } }) 
 	}
 
 	const products = data.collection?.products.edges.map(({ node: product }) => product);
+    const title="featured products";
 
 	return (
 		<>
 			<section className="absolute top-0 h-[100vh] w-full">
 				<HeroTwo />
-
-
 			</section>
 			<section className="">
 			<div className="flex relative h-[calc(100vh-64px)] w-full"></div>
 			</section>
 			<section className="mb-[5rem] p-4">
-				<h1 className="pb-16 pt-12 text-center font-titlefont text-3xl font-bold uppercase text-primary">
-					Featured Products
-				</h1>
+
+            <PageTitle title={title} />
+
 				<ProductList products={products} />
 			</section>
 		</>

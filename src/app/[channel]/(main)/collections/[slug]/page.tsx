@@ -5,8 +5,10 @@ import { useParams } from "next/navigation";
 import { useDebounce } from "use-debounce";
 import { GET_COLLECTION_ID } from "@/lib/queries";
 import { type ProductListItemFragment } from "@/gql/graphql";
+import { PageTitleProps, PageTitle } from "@/ui/components/layout/PagesTitle";
 import { ProductList } from "@/ui/components/ProductList";
 import { FilterSheet } from "@/ui/components/FilterSheet";
+import { saleorApiUrl } from "@/app/config";
 
 interface CollectionNode {
 	id: string;
@@ -35,7 +37,10 @@ export default function Page() {
 	const [debouncedFilters] = useDebounce(filters, 500);
 
 	const fetchData = async (variables: { [key: string]: any }) => {
-		const response = await fetch("https://discobabes.store/graphql/", {
+		if (!saleorApiUrl) {
+			throw new Error("saleorApiUrl is not defined");
+		}
+		const response = await fetch(saleorApiUrl, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -120,9 +125,8 @@ export default function Page() {
 
 	return (
 		<div className="relative mb-[5rem] h-full w-full p-4">
-			<h1 className="pb-16 pt-12 text-center font-titlefont text-3xl font-bold uppercase text-primary">
-				{data?.name}
-			</h1>
+			
+			<PageTitle title={data?.name ?? null} />
 
 			<div className="flex items-center z-[21] h-16 fixed top-0 left-[calc(100%-7rem)] md:left-[calc(100%-9rem)] flex-col justify-center ">
 				<button
