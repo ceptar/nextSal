@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, ButtonProps } from "@/ui/button"
+import { Button, type ButtonProps } from "@/ui/button"
 import { cn } from "@/lib/utils"
 
 const AnimatedButton = React.forwardRef<HTMLButtonElement, ButtonProps>(

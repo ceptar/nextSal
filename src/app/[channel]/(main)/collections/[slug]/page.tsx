@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { useDebounce } from "use-debounce";
 import { GET_COLLECTION_ID } from "@/lib/queries";
 import { type ProductListItemFragment } from "@/gql/graphql";
-import { PageTitleProps, PageTitle } from "@/ui/components/layout/PagesTitle";
+import { PageTitle } from "@/ui/components/layout/PagesTitle";
 import { ProductList } from "@/ui/components/ProductList";
 import { FilterSheet } from "@/ui/components/FilterSheet";
 import { saleorApiUrl } from "@/app/config";

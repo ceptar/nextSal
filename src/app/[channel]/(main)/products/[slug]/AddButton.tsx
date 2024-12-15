@@ -1,6 +1,6 @@
 "use client";
-import { AnimatedButton } from "@/ui/animated-button";
 import { useFormStatus } from "react-dom";
+import { AnimatedButton } from "@/ui/animated-button";
 
 export function AddButton({ disabled, onClick }: { disabled?: boolean; onClick: () => void }) {
 	const { pending } = useFormStatus();

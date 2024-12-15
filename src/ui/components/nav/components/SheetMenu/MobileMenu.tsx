@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { AnimatedButton } from "@/ui/animated-button";
 import clsx from "clsx";
+import { AnimatedButton } from "@/ui/animated-button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/ui/sheet";
 
 type NavItem = {
