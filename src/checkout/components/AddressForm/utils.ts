@@ -4,7 +4,7 @@ import {
 	type AddressField,
 	type AddressFormData,
 	type ApiAddressField,
-} from "../../components/AddressForm/types";
+} from "./types";
 import { getCountryName } from "@/checkout/lib/utils/locale";
 import {
 	type AddressFragment,

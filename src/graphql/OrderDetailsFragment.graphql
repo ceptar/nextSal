@@ -17,7 +17,7 @@ fragment OrderDetails on Order {
 				name
 				description
 				slug
-	thumbnail(size: 512, format: ORIGINAL) {
+	thumbnail(size: 1024, format: ORIGINAL) {
 		url
 		alt
 	}

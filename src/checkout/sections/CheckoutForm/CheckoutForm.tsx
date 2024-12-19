@@ -6,12 +6,13 @@ import { ContactSkeleton } from "@/checkout/sections/Contact/ContactSkeleton";
 import { DeliveryMethodsSkeleton } from "@/checkout/sections/DeliveryMethods/DeliveryMethodsSkeleton";
 import { AddressSectionSkeleton } from "@/checkout/components/AddressSectionSkeleton";
 import { getQueryParams } from "@/checkout/lib/utils/url";
+import { stripePayment } from "@/checkout/providers/stripePayment";
+import { PaymentSectionSkeleton } from "@/checkout/sections/PaymentSection";
 import { CollapseSection } from "@/checkout/sections/CheckoutForm/CollapseSection";
 import { Divider } from "@/checkout/components";
 import { UserShippingAddressSection } from "@/checkout/sections/UserShippingAddressSection";
 import { GuestShippingAddressSection } from "@/checkout/sections/GuestShippingAddressSection";
 import { UserBillingAddressSection } from "@/checkout/sections/UserBillingAddressSection";
-import { PaymentSection, PaymentSectionSkeleton } from "@/checkout/sections/PaymentSection";
 import { GuestBillingAddressSection } from "@/checkout/sections/GuestBillingAddressSection";
 import { useUser } from "@/checkout/hooks/useUser";
 
@@ -43,11 +44,15 @@ export const CheckoutForm = () => {
 					<Suspense fallback={<DeliveryMethodsSkeleton />}>
 						<DeliveryMethods collapsed={showOnlyContact} />
 					</Suspense>
+
+
 					<Suspense fallback={<PaymentSectionSkeleton />}>
 						<CollapseSection collapse={showOnlyContact}>
-							<PaymentSection />
+							{stripePayment()}
 						</CollapseSection>
 					</Suspense>
+
+
 				</>
 			</div>
 		</div>

@@ -5,9 +5,9 @@ import { PageTitle } from "@/ui/components/layout/PagesTitle";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
-	title: "DiscoBabes, no boring Jewelry",
+	title: "ACME Storefront, powered by Saleor & Next.js",
 	description:
-		"handmade art to complement expressive personalities and their ability to paint the world around them! rainbow, rosegold, glitter, pitchblack!",
+		"Storefront Next.js Example for building performant e-commerce experiences with Saleor - the composable, headless commerce platform for global brands.",
 };
 
 export default async function Page({ params }: { params: { channel: string } }) {
